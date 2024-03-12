@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>Test.GraphQL.Base</AssemblyName>
+		<RootNamespace>Test.GraphQL.Base</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bogus" />
+		<PackageReference Include="HotChocolate.Types" />
+		<PackageReference Include="HotChocolate.Types.Analyzers" />
+	</ItemGroup>
+
+</Project>

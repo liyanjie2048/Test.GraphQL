@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AssemblyName>Test.GraphQL.Identity</AssemblyName>
+		<RootNamespace>Test.GraphQL.Identity</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Infrastructure\Repositories\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="HotChocolate.AspNetCore" />
+		<PackageReference Include="HotChocolate.AspNetCore.Authorization" />
+		<PackageReference Include="HotChocolate.Data" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Test.GraphQL.Base\0.Test.GraphQL.Base.csproj" />
+	</ItemGroup>
+
+</Project>

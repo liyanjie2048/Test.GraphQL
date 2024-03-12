@@ -1,0 +1,6 @@
+﻿extend type User {
+	account: Account! @delegate(schema: "Account", path:"accountByUserId(userId: $fields:id)")
+}
+extend type Account {
+	user: User! @delegate(schema: "Identity", path:"user(id: $fields:user_Id)")
+}

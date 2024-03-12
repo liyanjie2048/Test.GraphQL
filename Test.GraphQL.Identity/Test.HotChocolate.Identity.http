@@ -1,0 +1,6 @@
+@Test.GraphQL.Identity_HostAddress = http://localhost:5155
+
+GET {{Test.GraphQL.Identity_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
