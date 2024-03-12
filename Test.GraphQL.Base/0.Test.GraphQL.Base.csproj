@@ -12,6 +12,7 @@
 		<PackageReference Include="Bogus" />
 		<PackageReference Include="HotChocolate.Types" />
 		<PackageReference Include="HotChocolate.Types.Analyzers" />
+		<PackageReference Include="MediatR" />
 	</ItemGroup>
 
 </Project>

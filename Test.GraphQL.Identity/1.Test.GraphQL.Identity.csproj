@@ -13,12 +13,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
 		<PackageReference Include="HotChocolate.AspNetCore" />
 		<PackageReference Include="HotChocolate.AspNetCore.Authorization" />
 		<PackageReference Include="HotChocolate.Data" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Liyanjie.HotChocolate.FluentValidation\Liyanjie.HotChocolate.FluentValidation.csproj" />
 		<ProjectReference Include="..\Test.GraphQL.Base\0.Test.GraphQL.Base.csproj" />
 	</ItemGroup>
 

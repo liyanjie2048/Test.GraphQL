@@ -1,24 +1,25 @@
-﻿namespace Test.GraphQL.Identity.Api.GraphQL;
+﻿using Liyanjie.HotChocolate.FluentValidation;
+
+using Test.GraphQL.Identity.Api.Requests;
+
+namespace Test.GraphQL.Identity.Api.GraphQL;
 
 [MutationType]
 public class UserMutations
 {
-    public async Task<UserModifyPayload> LikeUserById(Guid id,
+    public async Task<bool> LikeUserById(Guid id,
         IUserByIdDataLoader dataLoader)
     {
         var user = await dataLoader.LoadAsync(id);
-        return new(user);
+        return true;
     }
 
     public async Task<UserModifyPayload> ModifyUserById(Guid id,
-        UserModifyInput input,
+        [UseFluentValidation] UserModifyRequest input,
         IUserByIdDataLoader dataLoader)
     {
         var user = await dataLoader.LoadAsync(id);
         user.Age = input.Age;
-        return new(user);
+        return new(true, user);
     }
 }
-
-public record UserModifyPayload(User User);
-public record UserModifyInput(int Age);

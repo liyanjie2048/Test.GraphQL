@@ -9,6 +9,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "graphql-dotnet", "graphql-dotnet", "{027277EE-B7ED-4102-8250-C49A87E0E519}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.GraphQL", "Test.GraphQL\Test.GraphQL.csproj", "{92664A71-C2E5-4769-9A3C-6D7D96599E69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "graphql-platform", "graphql-platform", "{FF25B9BB-B999-40C2-BDCE-EADBD1397339}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{4C0EACBA-EB87-416D-9E35-0F106D1CE900}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Liyanjie.HotChocolate.FluentValidation", "Liyanjie.HotChocolate.FluentValidation\Liyanjie.HotChocolate.FluentValidation.csproj", "{B7650687-F840-420A-BAE7-82080CA66A22}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Liyanjie.HotChocolate.FusionGateway", "Liyanjie.HotChocolate.FusionGateway\Liyanjie.HotChocolate.FusionGateway.csproj", "{669CFB19-471A-40D6-9E78-1FEA0FBE2225}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0.Test.GraphQL.Base", "Test.GraphQL.Base\0.Test.GraphQL.Base.csproj", "{7BCEBCC0-326B-444E-8134-E451AB8F4697}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.Test.GraphQL.Identity", "Test.GraphQL.Identity\1.Test.GraphQL.Identity.csproj", "{52D7F67A-48B6-4178-8D92-6E2F500F36B9}"
@@ -16,12 +28,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.Test.GraphQL.Account", "Test.GraphQL.Account\2.Test.GraphQL.Account.csproj", "{54D52E9C-EC89-4F97-897B-337655412C2F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.GraphQL.Gateway", "Test.GraphQL.Gateway\Test.GraphQL.Gateway.csproj", "{7D1C7C36-D103-4013-A431-5E08C1A6C20A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.GraphQL", "Test.GraphQL\Test.GraphQL.csproj", "{92664A71-C2E5-4769-9A3C-6D7D96599E69}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "graphql-platform", "graphql-platform", "{FF25B9BB-B999-40C2-BDCE-EADBD1397339}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "graphql-dotnet", "graphql-dotnet", "{027277EE-B7ED-4102-8250-C49A87E0E519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +55,14 @@ Global
 		{92664A71-C2E5-4769-9A3C-6D7D96599E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92664A71-C2E5-4769-9A3C-6D7D96599E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92664A71-C2E5-4769-9A3C-6D7D96599E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7650687-F840-420A-BAE7-82080CA66A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7650687-F840-420A-BAE7-82080CA66A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7650687-F840-420A-BAE7-82080CA66A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7650687-F840-420A-BAE7-82080CA66A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669CFB19-471A-40D6-9E78-1FEA0FBE2225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669CFB19-471A-40D6-9E78-1FEA0FBE2225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669CFB19-471A-40D6-9E78-1FEA0FBE2225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669CFB19-471A-40D6-9E78-1FEA0FBE2225}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +73,9 @@ Global
 		{54D52E9C-EC89-4F97-897B-337655412C2F} = {FF25B9BB-B999-40C2-BDCE-EADBD1397339}
 		{7D1C7C36-D103-4013-A431-5E08C1A6C20A} = {FF25B9BB-B999-40C2-BDCE-EADBD1397339}
 		{92664A71-C2E5-4769-9A3C-6D7D96599E69} = {027277EE-B7ED-4102-8250-C49A87E0E519}
+		{4C0EACBA-EB87-416D-9E35-0F106D1CE900} = {FF25B9BB-B999-40C2-BDCE-EADBD1397339}
+		{B7650687-F840-420A-BAE7-82080CA66A22} = {4C0EACBA-EB87-416D-9E35-0F106D1CE900}
+		{669CFB19-471A-40D6-9E78-1FEA0FBE2225} = {4C0EACBA-EB87-416D-9E35-0F106D1CE900}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E732020-4FE9-4B6B-868A-24333B95AE72}
