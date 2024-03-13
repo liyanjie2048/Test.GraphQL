@@ -1,21 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="HotChocolate.AspNetCore" />
 		<PackageReference Include="HotChocolate.AspNetCore.CommandLine" />
 		<PackageReference Include="HotChocolate.Fusion" />
 		<PackageReference Include="HotChocolate.Fusion.Composition" />
-		<PackageReference Include="HotChocolate.Stitching" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Liyanjie.HotChocolate.FusionGateway\Liyanjie.HotChocolate.FusionGateway.csproj" />
+		<ProjectReference Include="..\Liyanjie.HotChocolate.FusionGateway\Liyanjie.HotChocolate.FusionGateway.csproj" />
 	</ItemGroup>
 
 </Project>

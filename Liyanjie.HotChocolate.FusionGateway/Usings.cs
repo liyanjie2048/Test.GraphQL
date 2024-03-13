@@ -1,4 +1,5 @@
-﻿global using System.Reactive.Subjects;
+﻿global using System.Diagnostics.CodeAnalysis;
+global using System.Reactive.Subjects;
 
 global using HotChocolate.Fusion.Composition;
 global using HotChocolate.Language;

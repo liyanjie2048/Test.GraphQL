@@ -1,6 +1,4 @@
-﻿using Test.GraphQL.Base;
-
-namespace Test.GraphQL.Account.Domain.Models.AccountAggregate;
+﻿namespace Test.GraphQL.Account.Domain.Models.AccountAggregate;
 
 public class Account : AggregateRootEntity
 {

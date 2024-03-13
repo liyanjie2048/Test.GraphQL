@@ -10,8 +10,11 @@
 
 	<ItemGroup>
 		<PackageReference Include="Bogus" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+		<PackageReference Include="HotChocolate.Data" />
 		<PackageReference Include="HotChocolate.Types" />
 		<PackageReference Include="HotChocolate.Types.Analyzers" />
+		<PackageReference Include="Liyanjie.HotChocolate.FluentValidation" />
 		<PackageReference Include="MediatR" />
 	</ItemGroup>
 

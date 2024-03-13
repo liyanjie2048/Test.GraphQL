@@ -1,7 +1,3 @@
-using FluentValidation;
-
-using Liyanjie.HotChocolate.FluentValidation;
-
 Console.Title = "Identity";
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,8 +10,8 @@ builder.Services.AddGraphQLServer()
     .AddFiltering()
     .AddSorting()
     .AddInMemorySubscriptions()
-    //.TryAddTypeInterceptor<Interceptor>()
-    .AddFluentValidation()
+    //.TryAddTypeInterceptor<Test.GraphQL.Identity.Interceptor>()
+    .AddFluentValidation(options => options.UseFluentValidationAttribute = true)
     ;
 
 var app = builder.Build();

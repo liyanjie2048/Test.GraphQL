@@ -110,6 +110,15 @@ public class Interceptor : TypeInterceptor
             Console.WriteLine("\titem.Name: " + item.Name);
             Console.WriteLine("\titem.Parameter?.Name: " + item.Parameter?.Name);
             Console.WriteLine("\titem.RuntimeType?.Name: " + item.RuntimeType?.Name);
+            Console.WriteLine("\titem.BindTo: " + item.BindTo);
+            try
+            {
+                Console.WriteLine("\tToRuntimeType: " + completionContext.GetType<IObjectType>(item.Type!).ToRuntimeType().Name);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\tToRuntimeType: " + ex.Message);
+            }
         }
     }
 

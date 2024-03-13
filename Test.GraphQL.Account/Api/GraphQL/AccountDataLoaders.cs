@@ -1,6 +1,4 @@
-﻿using Account_ = Test.GraphQL.Account.Domain.Models.AccountAggregate.Account;
-
-namespace Test.GraphQL.Account.Api.GraphQL;
+﻿namespace Test.GraphQL.Account.Api.GraphQL;
 
 public class AccountDataLoaders
 {

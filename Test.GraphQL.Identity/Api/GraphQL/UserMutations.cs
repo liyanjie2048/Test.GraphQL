@@ -1,8 +1,4 @@
-﻿using Liyanjie.HotChocolate.FluentValidation;
-
-using Test.GraphQL.Identity.Api.Requests;
-
-namespace Test.GraphQL.Identity.Api.GraphQL;
+﻿namespace Test.GraphQL.Identity.Api.GraphQL;
 
 [MutationType]
 public class UserMutations
@@ -15,7 +11,7 @@ public class UserMutations
     }
 
     public async Task<UserModifyPayload> ModifyUserById(Guid id,
-        [UseFluentValidation] UserModifyRequest input,
+        UserModifyRequest input,
         IUserByIdDataLoader dataLoader)
     {
         var user = await dataLoader.LoadAsync(id);

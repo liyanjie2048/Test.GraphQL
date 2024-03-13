@@ -1,8 +1,4 @@
-﻿using HotChocolate.Subscriptions;
-
-using Account_ = Test.GraphQL.Account.Domain.Models.AccountAggregate.Account;
-
-namespace Test.GraphQL.Account.Api.GraphQL;
+﻿namespace Test.GraphQL.Account.Api.GraphQL;
 
 [MutationType]
 public class AccountMutations

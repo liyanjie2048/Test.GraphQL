@@ -1,6 +1,4 @@
-﻿using Test.GraphQL.Base;
-
-namespace Test.GraphQL.Identity.Domain.Models.UserAggregate;
+﻿namespace Test.GraphQL.Identity.Domain.Models.UserAggregate;
 
 public class User : AggregateRootEntity
 {

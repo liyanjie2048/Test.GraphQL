@@ -9,6 +9,7 @@ builder.Services.AddGraphQLServer()
     .AddFiltering()
     .AddSorting()
     .AddInMemorySubscriptions()
+    .AddFluentValidation(options => options.UseFluentValidationAttribute = true)
     ;
 
 var app = builder.Build();

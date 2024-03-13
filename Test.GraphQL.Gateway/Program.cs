@@ -4,24 +4,28 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddRazorPages();
-
 #region Stitching
+
+//builder.Services.AddHttpClient("Identity", _ => _.BaseAddress = new Uri("http://localhost:5155/graphql"));
+//builder.Services.AddHttpClient("Account", _ => _.BaseAddress = new Uri("http://localhost:5257/graphql"));
 //builder.Services
-//.AddGraphQLServer()
-//.AddRemoteSchema("Identity")
-//.AddRemoteSchema("Account")
-//.AddTypeExtensionsFromFile("./Stitching.graphql")
+//  .AddGraphQLServer()
+//  .AddRemoteSchema("Identity")
+//  .AddRemoteSchema("Account")
+//  .AddTypeExtensionsFromFile("./Extend.graphql")
+//  ;
+
 #endregion
+
 #region Fusion
+
 builder.Services
     .AddFusionGatewayServer()
-    .RegisterEndpoints(new()
-    {
-        ["Identity"] = new Uri("http://localhost:5155/graphql"),
-        ["Account"] = new Uri("http://localhost:5257/graphql"),
-    })
+    .RegisterGatewayConfiguration(serviceProvider => FusionGatewayHelper.GatewaySubject)
+    .AddEndpoint("Identity", new Uri("http://localhost:5155/graphql"))
+    .AddEndpoint("Account", new Uri("http://localhost:5257/graphql"))
     ;
+
 #endregion
 
 var app = builder.Build();
@@ -31,6 +35,7 @@ var app = builder.Build();
 app.LoadFusionDoc();
 
 app.UseWebSockets();
+
 app.MapGraphQL();
 app.MapFusionDoc();
 
