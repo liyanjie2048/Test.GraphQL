@@ -1,10 +1,6 @@
 ﻿extend type User {
-	account: Account!
-		@declare(variable: "id", select: "id")
-		@resolver(subgraph: "Account", select: "accountByUserId(user_Id: $id)", arguments: [{name: "user_Id", type: "UUID!"}])
+	account: Account! @delegate(schema: "Account", path:"accountByUserId(userId: $fields:id)")
 }
 extend type Account {
-    user: User!
-		@declare(variable: "user_Id", select: "user_Id")
-		@resolver(subgraph: "Identity", select: "user(id: $user_Id)", arguments: [{name: "id", type: "UUID!"}])
+	user: User! @delegate(schema: "Identity", path:"user(id: $fields:user_Id)")
 }

@@ -6,25 +6,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region Stitching
 
-//builder.Services.AddHttpClient("Identity", _ => _.BaseAddress = new Uri("http://localhost:5155/graphql"));
-//builder.Services.AddHttpClient("Account", _ => _.BaseAddress = new Uri("http://localhost:5257/graphql"));
-//builder.Services
-//  .AddGraphQLServer()
-//  .AddRemoteSchema("Identity")
-//  .AddRemoteSchema("Account")
-//  .AddTypeExtensionsFromFile("./Extend.graphql")
-//  ;
+builder.Services.AddHttpClient("Identity", _ => _.BaseAddress = new Uri("http://localhost:5155/graphql"));
+builder.Services.AddHttpClient("Account", _ => _.BaseAddress = new Uri("http://localhost:5257/graphql"));
+builder.Services
+    .AddGraphQLServer()
+    .AddRemoteSchema("Identity")
+    .AddRemoteSchema("Account")
+    //.AddTypeExtensionsFromFile("./Extend.graphql")
+    .ModifyRequestOptions(options => options.IncludeExceptionDetails = false)
+    ;
 
 #endregion
 
 #region Fusion
 
-builder.Services
-    .AddFusionGatewayServer()
-    .RegisterGatewayConfiguration(serviceProvider => FusionGatewayHelper.GatewaySubject)
-    .AddEndpoint("Identity", new Uri("http://localhost:5155/graphql"))
-    .AddEndpoint("Account", new Uri("http://localhost:5257/graphql"))
-    ;
+//builder.Services
+//    .AddFusionGatewayServer()
+//    .RegisterGatewayConfiguration(serviceProvider => FusionGatewayHelper.GatewaySubject)
+//    .AddEndpoint("Identity", new Uri("http://localhost:5155/graphql"))
+//    .AddEndpoint("Account", new Uri("http://localhost:5257/graphql"))
+//    ;
 
 #endregion
 

@@ -11,7 +11,7 @@ public class UserMutations
     }
 
     public async Task<UserModifyPayload> ModifyUserById(Guid id,
-        UserModifyRequest input,
+        [UseFluentValidation] UserModifyRequest input,
         IUserByIdDataLoader dataLoader)
     {
         var user = await dataLoader.LoadAsync(id);

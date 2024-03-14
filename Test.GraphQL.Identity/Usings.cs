@@ -4,6 +4,8 @@ global using FluentValidation;
 
 global using HotChocolate.Data;
 
+global using Liyanjie.HotChocolate.FluentValidation;
+
 global using MediatR;
 
 global using Test.GraphQL.Base;
